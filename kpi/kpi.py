@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def read_data(file_path):
-    df = pd.read_csv(file_path)
+    df = pd.read_excel(file_path)
     return df
 
 def kpi(df):
@@ -128,7 +128,7 @@ def kpi(df):
     return kpi_dict
 
 def main():
-    file_path = "/Users/akshitsanoria/Desktop/retail/data/analysis/core_seg.csv"
+    file_path = "/Users/akshitsanoria/Desktop/retail/data/analysis/fact_order.xlsx"
     df = read_data(file_path)
     kpi_dict = kpi(df)
     print(kpi_dict)
@@ -136,6 +136,6 @@ def main():
 
 if __name__ == "__main__":
     kpi_dict =main()
-    kpi_dict["monthly_revenue"].to_csv('/Users/akshitsanoria/Desktop/retail/kpi/analysis/monthly_revenue.csv')
-    kpi_dict["monthly_active_customers"].to_csv('/Users/akshitsanoria/Desktop/retail/kpi/analysis/monthly_active_customers.csv')
-    kpi_dict["cohort_retention"].to_csv('/Users/akshitsanoria/Desktop/retail/kpi/analysis/cohort_retention.csv')
+    kpi_dict["monthly_revenue"].to_excel('/Users/akshitsanoria/Desktop/retail/kpi/analysis/monthly_revenue.xlsx', sheet_name='monthly_revenue')
+    kpi_dict["monthly_active_customers"].to_excel('/Users/akshitsanoria/Desktop/retail/kpi/analysis/monthly_active_customers.xlsx', sheet_name='monthly_active_customers')
+    kpi_dict["cohort_retention"].to_excel('/Users/akshitsanoria/Desktop/retail/kpi/analysis/cohort_retention.xlsx', sheet_name='cohort_retention')

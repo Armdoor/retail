@@ -72,14 +72,14 @@ def main():
     return df_main_segmented, df_core_segmented, df_prem_segmented, df, df_core, df_prem, df_main_dim_customers, df_core_dim_customers,df_prem_dim_customers
 
 if __name__ == "__main__":
-    main_seg, core_seg, prem_seg, df_all, df_c, df_p,df_main_dim_customers, df_core_dim_customers,df_prem_dim_customers  = main()
+    main_seg, fact_order, prem_seg, df_all, df_c, df_p,df_main_dim_customers, df_core_dim_customers,df_prem_dim_customers = main()
     
-    main_seg.to_csv('/Users/akshitsanoria/Desktop/retail/data/analysis/main_seg.csv')
-    core_seg.to_csv('/Users/akshitsanoria/Desktop/retail/data/analysis/core_seg.csv')
-    prem_seg.to_csv('/Users/akshitsanoria/Desktop/retail/data/analysis/prem_seg.csv')
-    df_all.to_csv('/Users/akshitsanoria/Desktop/retail/data/analysis/df_all.csv')
-    df_c.to_csv('/Users/akshitsanoria/Desktop/retail/data/analysis/df_c.csv')
-    df_p.to_csv('/Users/akshitsanoria/Desktop/retail/data/analysis/df_p.csv')
-    df_main_dim_customers.to_csv('/Users/akshitsanoria/Desktop/retail/data/analysis/df_main_dim_customers.csv')
-    df_core_dim_customers.to_csv('/Users/akshitsanoria/Desktop/retail/data/analysis/df_core_dim_customers.csv')
-    df_prem_dim_customers.to_csv('/Users/akshitsanoria/Desktop/retail/data/analysis/df_prem_dim_customers.csv')
+    main_seg.to_excel('/Users/akshitsanoria/Desktop/retail/data/analysis/main_seg.xlsx', sheet_name='main_seg')
+    fact_order.to_excel('/Users/akshitsanoria/Desktop/retail/data/analysis/core_seg.xlsx', sheet_name='fact_order')
+    prem_seg.to_excel('/Users/akshitsanoria/Desktop/retail/data/analysis/prem_seg.xlsx', sheet_name='prem_seg')
+    df_all.to_excel('/Users/akshitsanoria/Desktop/retail/data/analysis/df_all.xlsx', sheet_name='df_all')
+    df_c.to_excel('/Users/akshitsanoria/Desktop/retail/data/analysis/df_c.xlsx', sheet_name='df_c')
+    df_p.to_excel('/Users/akshitsanoria/Desktop/retail/data/analysis/df_p.xlsx', sheet_name='df_p')
+    df_main_dim_customers.to_excel('/Users/akshitsanoria/Desktop/retail/data/analysis/df_main_dim_customers.xlsx', sheet_name='df_main_dim_customers')
+    df_core_dim_customers.to_excel('/Users/akshitsanoria/Desktop/retail/data/analysis/df_core_dim_customers.xlsx', sheet_name='df_core_dim_customers')
+    df_prem_dim_customers.to_excel('/Users/akshitsanoria/Desktop/retail/data/analysis/df_prem_dim_customers.xlsx', sheet_name='df_prem_dim_customers')
